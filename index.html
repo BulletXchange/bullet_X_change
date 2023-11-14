@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>BulletXchange</title>
+    </head>
+    <body>
+        <div id="popup">
+            <div id="popup-content">
+              <p>Payment</p>
+              <img id="qr" src="./images/" alt="QR-Code">
+              <p id="adress">Our adress</p>
+              <p id="coinAdress">Adress</p>
+              <p id="amount">1</p>
+              <button class="blueBtn" id="done">Done</button>
+            </div>
+        </div>
+        <div id="popup-background"></div>
+        <header>
+            <nav>
+                <a href="">Home</a>
+                <a href="" id="active">Exchange</a>
+                <a href="https://t.me/bullet_sup" target="_blank">Contacts</a>
+            </nav>
+        </header>
+        <main>
+            <div class="screen">
+                <h1>Exchange safely</h1>
+                <p>The main purpose - is fast and safe services for our clients 24/7. Try out our currency exchange service and you will like the advantages of it!</p>
+                <p>Got questions? <a href="https://t.me/bullet_sup" target="_blank" class="textLink">Ask the support</a></p>
+            </div>
+            <div id="exchangeForm">
+                <div class="horizontal">
+                    <div>
+                        <div class="inputBlock">
+                            <h2>Currency to send</h2>
+                            <select name="sendCurrency" id="sendCurrency" onchange="CheckAmount()">
+                                <option value="usdt">Theter USDT</option>
+                                <option value="btc">Bitcoin BTC</option>
+                                <option value="eth">Ethereum ETH</option>
+                                <option value="ltc">Litecoin LTC</option>
+                                <option value="xrp">Ripple XRP</option>
+                                <option value="zec">Zcash ZEC</option>
+                                <option value="xtz">Tezos XTZ</option>
+                                <option value="etc">Ethereum Classic ETC</option>
+                                <option value="vet">VeChain VET</option>
+                                <option value="rvn">Ravencoin RVN</option>
+                                <option value="algo">Algorand ALGO</option>
+                                <option value="fil">Filecoin FIL</option>
+                                <option value="doge">Dogecoin DOGE</option>
+                                <option value="ada">Cardano ADA</option>
+                            </select>
+                        </div>
+                        <div class="inputBlock">
+                            <h2>Amount to send</h2>
+                            <input type="number" value="1" class="amount" id="sendAmount" onchange="CheckAmount()">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="inputBlock">
+                            <h2>Currency to get</h2>
+                            <select name="sendCurrency" id="receiveCurrency" onchange="CheckAmount()">
+                                <option value="usdt">Theter USDT</option>
+                                <option value="btc">Bitcoin BTC</option>
+                                <option value="eth">Ethereum ETH</option>
+                                <option value="ltc">Litecoin LTC</option>
+                                <option value="xrp">Ripple XRP</option>
+                                <option value="zec">Zcash ZEC</option>
+                                <option value="xtz">Tezos XTZ</option>
+                                <option value="etc">Ethereum Classic ETC</option>
+                                <option value="vet">VeChain VET</option>
+                                <option value="rvn">Ravencoin RVN</option>
+                                <option value="algo">Algorand ALGO</option>
+                                <option value="fil">Filecoin FIL</option>
+                                <option value="doge">Dogecoin DOGE</option>
+                                <option value="ada">Cardano ADA</option>
+                            </select>
+                        </div>
+                        <div class="inputBlock">
+                            <h2>Amount to get</h2>
+                            <input type="number" value="1" class="amount" id="receiveAmount" onclick="CheckAmount()" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="inputBlock">
+                        <input type="email" placeholder="Your e-mail here..." required>
+                        <input type="text" placeholder="Your wallete here..." required>
+                        <input type="submit" value="Submit" class="blueBtn" id="submit">
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <script src="./js/counts.js"></script>
+        <script src="./js/popup.js"></script>
+    </body>
+</html>
