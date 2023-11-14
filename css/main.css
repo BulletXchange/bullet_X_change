@@ -1,0 +1,199 @@
+@font-face {
+    font-family: HelveticaNowDisplay;
+    src: url(../fonts/HelveticaNowDisplay-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: HelveticaNowDisplay;
+}
+
+body{
+    background: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background: rgba(189, 189, 189, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+nav{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 23px;
+    font-weight: 400;
+}
+nav img{
+    margin-right: auto;
+}
+nav a{
+    margin: 20px;
+    color: white;
+    transition: 0.3s;
+}
+nav a:hover, #active{
+    color: #0b82f7;
+}
+
+main{
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.screen{
+    margin: 20px;
+    padding: 20px;
+    align-self: center;
+    text-align: center;
+    color: rgb(221, 221, 221);
+    background: rgba(189, 189, 189, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    font-size: 20px;
+}
+.screen h1{
+    margin: 20px 0;
+    font-size: 45px;
+    color: #ffffff;
+}
+.screen p{
+    margin: 20px 0;
+}
+
+#exchangeForm{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(189, 189, 189, 0.3);
+    backdrop-filter: blur(10px);
+}
+#exchangeForm > div{
+    margin: 0 50px;
+}
+#exchangeForm h2{
+    color: white;
+    font-weight: normal;
+}
+
+.horizontal{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.horizontal div{
+    margin: 10px;
+}
+
+.textLink{
+    color: #0b82f7;
+}
+.textLink:hover{
+    text-decoration: underline;
+}
+
+.inputBlock{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+}
+.inputBlock input, .inputBlock select{
+    margin: 10px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+}
+.inputBlock input[type="submit"], .blueBtn{
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    color: white;
+    background-color: #0b82f7;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.inputBlock input[type="submit"]:hover, .blueBtn:hover{
+    color: #0b82f7;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background: white;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    z-index: 2;
+}
+#popup-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #050C28A1; /* Semi-transparent black */
+  z-index: 1;
+}
+#popup-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    overflow-wrap: anywhere;
+}
+#popup-content p{
+    margin: 10px 0;
+    font-size: 24px;
+}
+#popup-content #coinAdress{
+    color: #041550;
+    font-size: 17px;
+    
+}
+#popup-content p:nth-child(1){
+    font-weight: 600;
+    font-size: 28px;
+}
+#popup button{
+    margin-top: 20px;
+    padding: 20px;
+    width: 50%;
+    border: none;
+    font-size: 20px;
+}
+#popup #amount{
+    color: #041550;
+}
